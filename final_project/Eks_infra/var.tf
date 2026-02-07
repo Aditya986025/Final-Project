@@ -13,7 +13,7 @@ variable "max_size" {
    type = number
 }
 
-variable "instance_types" {
+variable "instance_type" {
     description = "this value is present inside the .tfvars file"
     type = string
 }

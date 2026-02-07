@@ -96,7 +96,7 @@ resource "aws_eks_node_group" "nodes" {
   node_role_arn   = aws_iam_role.node_role.arn
 
   subnet_ids     = data.aws_subnets.default.ids
-  instance_types = [var.instance_types]
+  instance_types = [var.instance_type]
 
   scaling_config {
     desired_size =var.desired_size
@@ -111,3 +111,19 @@ resource "aws_eks_node_group" "nodes" {
     aws_iam_role_policy_attachment.ecr_policy
   ]
 }
+
+################################
+# CURRENT IAM USER NODE ACCESS
+################################
+data "aws_caller_identity" "current" {}
+
+data "aws_eks_cluster_auth" "eks" {
+  name = aws_eks_cluster.eks.name
+}
+
+provider "kubernetes" {
+  host                   = aws_eks_cluster.eks.endpoint
+  cluster_ca_certificate = base64decode(aws_eks_cluster.eks.certificate_authority[0].data)
+  token                  = data.aws_eks_cluster_auth.eks.token
+}
+

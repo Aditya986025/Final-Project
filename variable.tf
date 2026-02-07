@@ -38,22 +38,22 @@ variable "password" {
 
 # EKS Variables
 
-variable "desired_nodes" {
+variable "desired_size" {
   description = "Desired number of EKS nodes"
   type        = number
 }
 
-variable "max_nodes" {
+variable "max_size" {
   description = "Maximum number of EKS nodes"
   type        = number
 }
 
-variable "min_nodes" {
+variable "min_size" {
   description = "Minimum number of EKS nodes"
   type        = number
 }
 
-variable "node_instance_type" {
+variable "instance_type" {
   description = "EKS node instance type"
   type        = string
 }
@@ -64,7 +64,4 @@ variable "bucket_name" {
   type        = string
 }
 
-variable "environment" {
-  description = "Environment tag for S3 bucket"
-  type        = string
-} 
+ 

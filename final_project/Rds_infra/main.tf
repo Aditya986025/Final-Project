@@ -3,7 +3,7 @@
     
      engine               = "mariadb"
       engine_version       = "11.4.5"
-      instance_class       = var.instance_types
+      instance_class       = var.instance_class
       allocated_storage    = var.allocated_storage
       max_allocated_storage = var.max_allocated_storage
       db_name              = "my_db"

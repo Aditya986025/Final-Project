@@ -8,7 +8,7 @@ variable "allocated_storage" {
     type = number
 }
 
-variable "instance_types" {
+variable "instance_class" {
     description = "this value is present inside the .tfvars file"
     type = string 
   

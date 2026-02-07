@@ -9,11 +9,11 @@ username             = "admin"
 password             = "DevPassword123"  # Change this in production
 
 # EKS Variables
-desired_nodes      = 2
-max_nodes          = 2
-min_nodes          = 2
-node_instance_type = "m7i-flex.large"
+desired_size      = 2
+max_size          = 2
+min_size          = 2
+instance_type = "m7i-flex.large"
 
 # S3 Variables
 bucket_name = "radison-hms-frontend-finalproject"
-environment = "dev" 
+
