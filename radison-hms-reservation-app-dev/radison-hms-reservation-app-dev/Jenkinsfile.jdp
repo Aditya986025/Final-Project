@@ -27,9 +27,9 @@ pipeline {
         }
         stage('DOCKER-BUILD'){
             steps{
-                sh '''docker build . -t shubhamkalsait1/radison-reservation-app:latest
-                        docker push shubhamkalsait1/radison-reservation-app:latest
-                        docker rmi -f shubhamkalsait1/radison-reservation-app:latest'''
+                sh '''docker build . -t Aditya986025/radison-reservation-app:latest
+                        docker push Aditya986025/radison-reservation-app:latest
+                        docker rmi -f Aditya986025/radison-reservation-app:latest'''
             }
         }
         stage('DEPLOY'){
