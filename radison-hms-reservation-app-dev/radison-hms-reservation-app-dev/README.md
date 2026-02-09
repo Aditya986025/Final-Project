@@ -46,4 +46,5 @@ cp dist/* /var/www/html/
 systemctl start apache2
 ```
 Project done
+i have to run all this command
 
