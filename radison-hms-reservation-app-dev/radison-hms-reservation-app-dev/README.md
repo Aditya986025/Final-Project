@@ -45,5 +45,5 @@ apt install apache2 -y
 cp dist/* /var/www/html/
 systemctl start apache2
 ```
-
+Project done
 
